@@ -1,6 +1,4 @@
 import { useState, useCallback } from 'react';
-import 'onnxruntime-web';
-import { removeBackground } from '@imgly/background-removal';
 import { detectLocale, translations } from '@/lib/translations';
 import type { Locale } from '@/lib/translations';
 import LanguageToggle from '@/components/LanguageToggle';
@@ -28,18 +26,8 @@ const Index = () => {
     setError(null);
 
     try {
-      // Convert File to Blob for compatibility
-      const inputBlob = new Blob([await file.arrayBuffer()], { type: file.type });
-
-      const result = await removeBackground(inputBlob, {
-        model: 'isnet_quint8',
-        progress: (key: string, current: number, total: number) => {
-          console.log(`Processing ${key}: ${current}/${total}`);
-          if (total > 0) {
-            setProgress((current / total) * 100);
-          }
-        },
-      });
+      const { processBackgroundRemoval } = await import('@/lib/backgroundRemoval');
+      const result = await processBackgroundRemoval(file, setProgress);
 
       const url = URL.createObjectURL(result);
       setResultUrl(url);
@@ -65,7 +53,6 @@ const Index = () => {
 
   return (
     <div className="mesh-background min-h-screen flex flex-col items-center px-4 py-8 sm:py-16">
-      {/* Header */}
       <div className="w-full max-w-lg flex items-center justify-between mb-10 fade-in">
         <div>
           <h1 className="text-2xl sm:text-3xl font-bold text-foreground tracking-tight">
@@ -76,14 +63,12 @@ const Index = () => {
         <LanguageToggle locale={locale} onToggle={toggleLocale} />
       </div>
 
-      {/* Error */}
       {error && (
         <div className="glass-card px-5 py-3 mb-6 text-sm text-destructive font-medium fade-in">
           {error}
         </div>
       )}
 
-      {/* Main content */}
       {state === 'upload' && (
         <UploadZone locale={locale} onFileSelected={handleFileSelected} onError={setError} />
       )}
@@ -94,7 +79,6 @@ const Index = () => {
         <ResultView locale={locale} resultUrl={resultUrl} onReset={handleReset} />
       )}
 
-      {/* Footer badges */}
       <FeatureBadges locale={locale} />
     </div>
   );
