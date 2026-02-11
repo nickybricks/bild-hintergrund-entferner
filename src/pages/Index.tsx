@@ -1,18 +1,11 @@
-import { useState, useCallback, useEffect } from 'react';
-import { useSearchParams } from 'react-router-dom';
+import { useState, useCallback } from 'react';
 import { detectLocale, translations } from '@/lib/translations';
 import type { Locale } from '@/lib/translations';
-import { useCredits } from '@/hooks/useCredits';
-import { toast } from 'sonner';
 import LanguageToggle from '@/components/LanguageToggle';
-import CreditBadge from '@/components/CreditBadge';
 import UploadZone from '@/components/UploadZone';
 import ProcessingView from '@/components/ProcessingView';
 import ResultView from '@/components/ResultView';
 import FeatureBadges from '@/components/FeatureBadges';
-import PurchaseModal from '@/components/PurchaseModal';
-
-const API_URL = import.meta.env.VITE_API_URL || 'http://localhost:8000';
 
 type AppState = 'upload' | 'processing' | 'result';
 
@@ -21,43 +14,16 @@ const Index = () => {
   const [state, setState] = useState<AppState>('upload');
   const [progress, setProgress] = useState(0);
   const [resultUrl, setResultUrl] = useState<string | null>(null);
-  const [originalFile, setOriginalFile] = useState<File | null>(null);
   const [error, setError] = useState<string | null>(null);
-  const [purchaseOpen, setPurchaseOpen] = useState(false);
-  const [searchParams, setSearchParams] = useSearchParams();
 
-  const { credits, token, consumeCredit, addCredits } = useCredits();
   const t = translations[locale];
 
   const toggleLocale = () => setLocale((l) => (l === 'de' ? 'en' : 'de'));
-
-  // Handle Stripe return
-  useEffect(() => {
-    const sessionId = searchParams.get('session_id');
-    if (!sessionId) return;
-
-    const verify = async () => {
-      try {
-        const res = await fetch(`${API_URL}/api/verify-payment?session_id=${sessionId}`);
-        if (!res.ok) throw new Error('Verification failed');
-        const data = await res.json();
-        addCredits(data.credits, data.token);
-        toast.success(`✅ ${data.credits} ${t.creditsActivated}`);
-      } catch (err) {
-        console.error('Payment verification failed:', err);
-      } finally {
-        setSearchParams({}, { replace: true });
-      }
-    };
-
-    verify();
-  }, [searchParams, setSearchParams, addCredits, t.creditsActivated]);
 
   const handleFileSelected = useCallback(async (file: File) => {
     setState('processing');
     setProgress(0);
     setError(null);
-    setOriginalFile(file);
 
     try {
       const { processBackgroundRemoval } = await import('@/lib/backgroundRemoval');
@@ -80,7 +46,6 @@ const Index = () => {
   const handleReset = useCallback(() => {
     if (resultUrl) URL.revokeObjectURL(resultUrl);
     setResultUrl(null);
-    setOriginalFile(null);
     setState('upload');
     setProgress(0);
     setError(null);
@@ -95,10 +60,7 @@ const Index = () => {
           </h1>
           <p className="text-muted-foreground text-sm mt-1">{t.subtitle}</p>
         </div>
-        <div className="flex items-center gap-2">
-          <CreditBadge locale={locale} credits={credits} />
-          <LanguageToggle locale={locale} onToggle={toggleLocale} />
-        </div>
+        <LanguageToggle locale={locale} onToggle={toggleLocale} />
       </div>
 
       {error && (
@@ -113,26 +75,11 @@ const Index = () => {
       {state === 'processing' && (
         <ProcessingView locale={locale} progress={progress} />
       )}
-      {state === 'result' && resultUrl && originalFile && (
-        <ResultView
-          locale={locale}
-          resultUrl={resultUrl}
-          originalFile={originalFile}
-          onReset={handleReset}
-          credits={credits}
-          creditsToken={token}
-          onConsumeCredit={consumeCredit}
-          onShowPurchase={() => setPurchaseOpen(true)}
-        />
+      {state === 'result' && resultUrl && (
+        <ResultView locale={locale} resultUrl={resultUrl} onReset={handleReset} />
       )}
 
       <FeatureBadges locale={locale} />
-
-      <PurchaseModal
-        locale={locale}
-        open={purchaseOpen}
-        onOpenChange={setPurchaseOpen}
-      />
     </div>
   );
 };
