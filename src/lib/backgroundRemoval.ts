@@ -14,7 +14,7 @@ export async function processBackgroundRemoval(
         onProgress((current / total) * 100);
       }
     },
-  });
+  } as any);
 
   return result;
 }
