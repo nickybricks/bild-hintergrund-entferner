@@ -16,17 +16,13 @@ export default defineConfig(({ mode }) => ({
   resolve: {
     alias: {
       "@": path.resolve(__dirname, "./src"),
+      "onnxruntime-web": "onnxruntime-web/dist/ort.all.bundle.min.mjs",
     },
   },
   optimizeDeps: {
-    exclude: ['onnxruntime-web'],
+    exclude: ['@imgly/background-removal'],
   },
   worker: {
     format: 'es',
-  },
-  build: {
-    rollupOptions: {
-      external: [/^onnxruntime-web/],
-    },
   },
 }));

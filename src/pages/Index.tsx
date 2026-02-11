@@ -1,4 +1,5 @@
 import { useState, useCallback } from 'react';
+import 'onnxruntime-web';
 import { removeBackground } from '@imgly/background-removal';
 import { detectLocale, translations } from '@/lib/translations';
 import type { Locale } from '@/lib/translations';
@@ -31,6 +32,7 @@ const Index = () => {
       const inputBlob = new Blob([await file.arrayBuffer()], { type: file.type });
 
       const result = await removeBackground(inputBlob, {
+        model: 'isnet_quint8',
         progress: (key: string, current: number, total: number) => {
           console.log(`Processing ${key}: ${current}/${total}`);
           if (total > 0) {
