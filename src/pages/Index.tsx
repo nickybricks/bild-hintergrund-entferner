@@ -27,22 +27,31 @@ const Index = () => {
     setError(null);
 
     try {
-      const blob = await removeBackground(file, {
+      // Convert File to Blob for compatibility
+      const inputBlob = new Blob([await file.arrayBuffer()], { type: file.type });
+
+      const result = await removeBackground(inputBlob, {
         progress: (key: string, current: number, total: number) => {
+          console.log(`Processing ${key}: ${current}/${total}`);
           if (total > 0) {
             setProgress((current / total) * 100);
           }
         },
       });
 
-      const url = URL.createObjectURL(blob);
+      const url = URL.createObjectURL(result);
       setResultUrl(url);
       setState('result');
-    } catch {
-      setError(t.errorGeneric);
+    } catch (err) {
+      console.error('Background removal failed:', err);
+      setError(
+        locale === 'de'
+          ? 'Das Bild konnte nicht verarbeitet werden. Bitte versuche ein anderes Bild oder ein kleineres Format (max. 4096×4096px).'
+          : 'Could not process the image. Please try a different image or a smaller size (max 4096×4096px).'
+      );
       setState('upload');
     }
-  }, [t]);
+  }, [locale]);
 
   const handleReset = useCallback(() => {
     if (resultUrl) URL.revokeObjectURL(resultUrl);
