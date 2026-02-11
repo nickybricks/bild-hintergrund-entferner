@@ -16,7 +16,6 @@ export default defineConfig(({ mode }) => ({
   resolve: {
     alias: {
       "@": path.resolve(__dirname, "./src"),
-      "onnxruntime-web": "onnxruntime-web/dist/ort.all.bundle.min.mjs",
     },
   },
   optimizeDeps: {
@@ -24,5 +23,8 @@ export default defineConfig(({ mode }) => ({
   },
   worker: {
     format: 'es',
+  },
+  build: {
+    target: 'esnext',
   },
 }));
