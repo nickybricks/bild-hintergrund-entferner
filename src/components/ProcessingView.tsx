@@ -11,13 +11,13 @@ const ProcessingView = ({ locale, progress }: ProcessingViewProps) => {
   const t = translations[locale];
 
   return (
-    <div className="fade-in w-full max-w-lg mx-auto">
+    <div className="fade-in w-full max-w-[600px] mx-auto">
       <div className="glass-card-lg flex flex-col items-center gap-6 p-12">
         <div className="relative">
           <Sparkles size={32} className="text-primary animate-pulse" />
         </div>
         <p className="text-foreground font-medium text-lg">{t.processing}</p>
-        <div className="w-full h-2 rounded-full overflow-hidden" style={{ background: 'var(--glass-bg)' }}>
+        <div className="w-full h-2 rounded-full overflow-hidden bg-muted">
           <div
             className="h-full rounded-full bg-primary transition-all duration-300 ease-out"
             style={{ width: `${Math.max(progress, 2)}%` }}

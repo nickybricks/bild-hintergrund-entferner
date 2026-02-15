@@ -53,18 +53,18 @@ const UploadZone = ({ locale, onFileSelected, onError }: UploadZoneProps) => {
   };
 
   return (
-    <div className="fade-in w-full max-w-lg mx-auto">
+    <div className="fade-in w-full max-w-[600px] mx-auto">
       {!isMobile ? (
         <div
           onDragOver={(e) => { e.preventDefault(); setDragOver(true); }}
           onDragLeave={() => setDragOver(false)}
           onDrop={handleDrop}
-          className={`glass-card-lg flex flex-col items-center justify-center gap-4 p-12 cursor-pointer transition-all duration-200 ${
+          className={`glass-card-lg flex flex-col items-center justify-center gap-4 p-12 cursor-pointer transition-all duration-200 border-2 border-dashed border-primary/40 hover:border-primary/80 ${
             dragOver ? 'drop-zone-active' : ''
           }`}
           onClick={() => { vibrate(); inputRef.current?.click(); }}
         >
-          <div className="glass-button p-4 rounded-2xl">
+          <div className="glass-card p-4 rounded-2xl">
             <Upload size={28} className="text-primary" />
           </div>
           <div className="text-center">
@@ -77,8 +77,8 @@ const UploadZone = ({ locale, onFileSelected, onError }: UploadZoneProps) => {
           <p className="text-muted-foreground text-xs mt-1">{t.formats}</p>
         </div>
       ) : (
-        <div className="glass-card-lg flex flex-col items-center justify-center gap-5 p-10">
-          <div className="glass-button p-4 rounded-2xl">
+        <div className="glass-card-lg flex flex-col items-center justify-center gap-5 p-10 border-2 border-dashed border-primary/40">
+          <div className="glass-card p-4 rounded-2xl">
             <Image size={28} className="text-primary" />
           </div>
           <button

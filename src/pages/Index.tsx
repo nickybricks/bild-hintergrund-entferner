@@ -1,7 +1,9 @@
 import { useState, useCallback } from 'react';
 import { detectLocale, translations } from '@/lib/translations';
 import type { Locale } from '@/lib/translations';
-import LanguageToggle from '@/components/LanguageToggle';
+import { useTheme } from '@/hooks/useTheme';
+import Header from '@/components/Header';
+import Footer from '@/components/Footer';
 import UploadZone from '@/components/UploadZone';
 import ProcessingView from '@/components/ProcessingView';
 import ResultView from '@/components/ResultView';
@@ -15,6 +17,7 @@ const Index = () => {
   const [progress, setProgress] = useState(0);
   const [resultUrl, setResultUrl] = useState<string | null>(null);
   const [error, setError] = useState<string | null>(null);
+  const { theme, toggleTheme } = useTheme();
 
   const t = translations[locale];
 
@@ -52,34 +55,44 @@ const Index = () => {
   }, [resultUrl]);
 
   return (
-    <div className="mesh-background min-h-screen flex flex-col items-center px-4 py-8 sm:py-16">
-      <div className="w-full max-w-lg flex items-center justify-between mb-10 fade-in">
-        <div>
-          <h1 className="text-2xl sm:text-3xl font-bold text-foreground tracking-tight">
-            {t.title}
-          </h1>
-          <p className="text-muted-foreground text-sm mt-1">{t.subtitle}</p>
+    <div className="dot-background min-h-screen flex flex-col">
+      <Header
+        locale={locale}
+        theme={theme}
+        onToggleLocale={toggleLocale}
+        onToggleTheme={toggleTheme}
+      />
+
+      <main className="flex-1 flex flex-col items-center px-4 pt-12 sm:pt-20">
+        <div className="w-full max-w-[800px] mx-auto">
+          <div className="text-center mb-10 fade-in">
+            <h1 className="text-3xl sm:text-4xl font-bold text-foreground tracking-tight">
+              {t.title}
+            </h1>
+            <p className="text-muted-foreground text-sm sm:text-base mt-2">{t.subtitle}</p>
+          </div>
+
+          {error && (
+            <div className="glass-card px-5 py-3 mb-6 text-sm text-destructive font-medium fade-in text-center">
+              {error}
+            </div>
+          )}
+
+          {state === 'upload' && (
+            <UploadZone locale={locale} onFileSelected={handleFileSelected} onError={setError} />
+          )}
+          {state === 'processing' && (
+            <ProcessingView locale={locale} progress={progress} />
+          )}
+          {state === 'result' && resultUrl && (
+            <ResultView locale={locale} resultUrl={resultUrl} onReset={handleReset} />
+          )}
+
+          <FeatureBadges locale={locale} />
         </div>
-        <LanguageToggle locale={locale} onToggle={toggleLocale} />
-      </div>
+      </main>
 
-      {error && (
-        <div className="glass-card px-5 py-3 mb-6 text-sm text-destructive font-medium fade-in">
-          {error}
-        </div>
-      )}
-
-      {state === 'upload' && (
-        <UploadZone locale={locale} onFileSelected={handleFileSelected} onError={setError} />
-      )}
-      {state === 'processing' && (
-        <ProcessingView locale={locale} progress={progress} />
-      )}
-      {state === 'result' && resultUrl && (
-        <ResultView locale={locale} resultUrl={resultUrl} onReset={handleReset} />
-      )}
-
-      <FeatureBadges locale={locale} />
+      <Footer locale={locale} />
     </div>
   );
 };

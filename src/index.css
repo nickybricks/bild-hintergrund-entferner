@@ -1,7 +1,4 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
-@import url("https://fonts.googleapis.com/css2?family=Inter&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Libre+Caslon+Text&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=SF+Mono&display=swap");
 
 @tailwind base;
 @tailwind components;
@@ -9,23 +6,24 @@
 
 @layer base {
   :root {
-    --background: 210 40% 98.0392%;
-    --foreground: 220 20% 10%;
+    --background: 0 0% 100%;
+    --foreground: 0 0% 10%;
 
-    --card: 0 0% 100% / 0.45;
-    --card-foreground: 220 20% 10%;
+    --card: 0 0% 100% / 0.6;
+    --card-foreground: 0 0% 10%;
 
     --popover: 0 0% 100%;
-    --popover-foreground: 220 20% 10%;
+    --popover-foreground: 0 0% 10%;
 
     --primary: 32 100% 50%;
     --primary-foreground: 0 0% 100%;
+    --primary-hover: 32 100% 45%;
 
-    --secondary: 220 15% 92%;
-    --secondary-foreground: 220 20% 20%;
+    --secondary: 220 15% 95%;
+    --secondary-foreground: 0 0% 10%;
 
-    --muted: 220 15% 92%;
-    --muted-foreground: 220 10% 50%;
+    --muted: 220 10% 95%;
+    --muted-foreground: 220 9% 46%;
 
     --accent: 32 100% 50%;
     --accent-foreground: 0 0% 100%;
@@ -33,75 +31,62 @@
     --destructive: 0 84% 60%;
     --destructive-foreground: 0 0% 100%;
 
-    --border: 0 0% 100% / 0.3;
-    --input: 0 0% 100% / 0.3;
+    --border: 0 0% 0% / 0.08;
+    --input: 0 0% 0% / 0.08;
     --ring: 32 100% 50%;
 
     --radius: 1rem;
 
-    --glass-bg: rgba(255, 255, 255, 0.35);
-    --glass-border: rgba(255, 255, 255, 0.45);
-    --glass-blur: 24px;
-    --glass-hover: rgba(255, 255, 255, 0.5);
+    --glass-bg: rgba(255, 255, 255, 0.6);
+    --glass-border: rgba(0, 0, 0, 0.08);
+    --glass-blur: 16px;
+    --glass-hover: rgba(255, 255, 255, 0.75);
+    --glass-saturate: 1.2;
 
-    --gradient-mesh: radial-gradient(ellipse at 20% 50%, hsl(210 100% 90% / 0.5) 0%, transparent 50%),
-                     radial-gradient(ellipse at 80% 20%, hsl(260 80% 90% / 0.4) 0%, transparent 50%),
-                     radial-gradient(ellipse at 50% 80%, hsl(180 60% 90% / 0.3) 0%, transparent 50%);
+    --dot-color: #d0d0d0;
+    --dot-size: 1px;
+    --dot-spacing: 20px;
 
     --success: 145 65% 42%;
     --success-foreground: 0 0% 100%;
-    --font-sans: Inter, ui-sans-serif, system-ui, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol, Noto Color Emoji;
-    --font-serif: "Libre Caslon Text", ui-serif, Georgia, Cambria, Times New Roman, Times, serif;
-    --font-mono: "SF Mono", ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, Liberation Mono, Courier New, monospace;
   }
 
-  @media (prefers-color-scheme: dark) {
-    :root {
-      --background: 225 25% 8%;
-      --foreground: 220 15% 90%;
-
-      --card: 0 0% 100% / 0.08;
-      --card-foreground: 220 15% 90%;
-
-      --popover: 225 25% 12%;
-      --popover-foreground: 220 15% 90%;
-
-      --primary: 210 100% 60%;
-      --primary-foreground: 0 0% 100%;
-
-      --secondary: 225 20% 18%;
-      --secondary-foreground: 220 15% 85%;
-
-      --muted: 225 20% 18%;
-      --muted-foreground: 220 10% 55%;
-
-      --accent: 210 100% 60%;
-      --accent-foreground: 0 0% 100%;
-
-      --destructive: 0 70% 50%;
-      --destructive-foreground: 0 0% 100%;
-
-      --border: 0 0% 100% / 0.1;
-      --input: 0 0% 100% / 0.1;
-      --ring: 210 100% 60%;
-
-      --glass-bg: rgba(255, 255, 255, 0.06);
-      --glass-border: rgba(255, 255, 255, 0.12);
-      --glass-hover: rgba(255, 255, 255, 0.1);
-
-      --gradient-mesh: radial-gradient(ellipse at 20% 50%, hsl(210 100% 30% / 0.3) 0%, transparent 50%),
-                       radial-gradient(ellipse at 80% 20%, hsl(260 80% 30% / 0.2) 0%, transparent 50%),
-                       radial-gradient(ellipse at 50% 80%, hsl(180 60% 25% / 0.2) 0%, transparent 50%);
-
-      --success: 145 65% 50%;
-      --success-foreground: 0 0% 100%;
-    }
-  }
   .dark {
-    --font-sans: Inter, ui-sans-serif, system-ui, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol, Noto Color Emoji;
-    --font-serif: "Libre Caslon Text", ui-serif, Georgia, Cambria, Times New Roman, Times, serif;
-    --font-mono: "SF Mono", ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, Liberation Mono, Courier New, monospace;
-    --radius: 1rem;
+    --background: 0 0% 4%;
+    --foreground: 0 0% 96%;
+
+    --card: 0 0% 100% / 0.05;
+    --card-foreground: 0 0% 96%;
+
+    --popover: 0 0% 8%;
+    --popover-foreground: 0 0% 96%;
+
+    --primary: 32 100% 50%;
+    --primary-foreground: 0 0% 100%;
+    --primary-hover: 32 100% 45%;
+
+    --secondary: 0 0% 12%;
+    --secondary-foreground: 0 0% 96%;
+
+    --muted: 0 0% 14%;
+    --muted-foreground: 220 9% 64%;
+
+    --accent: 32 100% 50%;
+    --accent-foreground: 0 0% 100%;
+
+    --destructive: 0 70% 50%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 0 0% 100% / 0.08;
+    --input: 0 0% 100% / 0.08;
+    --ring: 32 100% 50%;
+
+    --glass-bg: rgba(255, 255, 255, 0.05);
+    --glass-border: rgba(255, 136, 0, 0.12);
+    --glass-blur: 16px;
+    --glass-hover: rgba(255, 255, 255, 0.08);
+
+    --dot-color: rgba(255, 255, 255, 0.06);
   }
 }
 
@@ -111,34 +96,72 @@
   }
 
   body {
-    @apply bg-background text-foreground font-sans antialiased;
+    @apply bg-background text-foreground antialiased;
     font-family: 'Inter', -apple-system, BlinkMacSystemFont, system-ui, sans-serif;
   }
 }
 
 @layer components {
+  /* Dot grid background */
+  .dot-background {
+    background-color: hsl(var(--background));
+    background-image:
+      radial-gradient(circle at center, transparent 40%, rgba(0, 0, 0, 0.03) 100%),
+      radial-gradient(circle, var(--dot-color) var(--dot-size), transparent var(--dot-size));
+    background-size: 100% 100%, var(--dot-spacing) var(--dot-spacing);
+  }
+
+  .dark .dot-background {
+    background-image:
+      radial-gradient(circle at center, transparent 40%, rgba(0, 0, 0, 0.15) 100%),
+      radial-gradient(circle, var(--dot-color) var(--dot-size), transparent var(--dot-size));
+  }
+
+  /* Liquid Glass Card */
   .glass-card {
     background: var(--glass-bg);
-    backdrop-filter: blur(var(--glass-blur));
-    -webkit-backdrop-filter: blur(var(--glass-blur));
+    backdrop-filter: blur(var(--glass-blur)) saturate(var(--glass-saturate, 1.2));
+    -webkit-backdrop-filter: blur(var(--glass-blur)) saturate(var(--glass-saturate, 1.2));
     border: 1px solid var(--glass-border);
     border-radius: 20px;
   }
 
-  .glass-card-lg {
-    background: var(--glass-bg);
-    backdrop-filter: blur(var(--glass-blur));
-    -webkit-backdrop-filter: blur(var(--glass-blur));
-    border: 1px solid var(--glass-border);
-    border-radius: 24px;
+  .dark .glass-card {
+    box-shadow: 0 0 20px rgba(255, 136, 0, 0.05), inset 0 0 20px rgba(255, 255, 255, 0.03);
   }
 
+  .glass-card-lg {
+    background: var(--glass-bg);
+    backdrop-filter: blur(var(--glass-blur)) saturate(var(--glass-saturate, 1.2));
+    -webkit-backdrop-filter: blur(var(--glass-blur)) saturate(var(--glass-saturate, 1.2));
+    border: 1px solid var(--glass-border);
+    border-radius: 20px;
+  }
+
+  .dark .glass-card-lg {
+    box-shadow: 0 0 20px rgba(255, 136, 0, 0.05), inset 0 0 20px rgba(255, 255, 255, 0.03);
+  }
+
+  /* Liquid Glass Pill (for header navigation islands) */
+  .glass-pill {
+    background: var(--glass-bg);
+    backdrop-filter: blur(var(--glass-blur)) saturate(var(--glass-saturate, 1.2));
+    -webkit-backdrop-filter: blur(var(--glass-blur)) saturate(var(--glass-saturate, 1.2));
+    border: 1px solid var(--glass-border);
+    border-radius: 9999px;
+  }
+
+  .dark .glass-pill {
+    box-shadow: 0 0 20px rgba(255, 136, 0, 0.05), inset 0 0 20px rgba(255, 255, 255, 0.03);
+  }
+
+  /* Buttons */
   .glass-button {
     background: var(--glass-bg);
     backdrop-filter: blur(16px);
     -webkit-backdrop-filter: blur(16px);
     border: 1px solid var(--glass-border);
-    border-radius: 14px;
+    border-radius: 16px;
     transition: all 0.2s ease;
   }
 
@@ -155,12 +178,12 @@
     background: hsl(var(--primary));
     color: hsl(var(--primary-foreground));
     border: none;
-    border-radius: 14px;
+    border-radius: 16px;
     transition: all 0.2s ease;
   }
 
   .glass-button-primary:hover {
-    filter: brightness(1.1);
+    background: hsl(var(--primary-hover));
     transform: scale(1.03);
   }
 
@@ -168,11 +191,7 @@
     transform: scale(0.97);
   }
 
-  .mesh-background {
-    background: var(--gradient-mesh);
-    background-color: hsl(var(--background));
-  }
-
+  /* Checkerboard for transparent image preview */
   .checkerboard {
     background-image:
       linear-gradient(45deg, hsl(var(--muted)) 25%, transparent 25%),
@@ -183,11 +202,14 @@
     background-position: 0 0, 0 10px, 10px -10px, -10px 0px;
   }
 
+  /* Upload zone states */
   .drop-zone-active {
-    border-color: hsl(var(--primary));
-    background: hsl(var(--primary) / 0.08);
+    border-color: hsl(var(--primary)) !important;
+    border-style: solid !important;
+    box-shadow: 0 0 24px rgba(255, 136, 0, 0.15);
   }
 
+  /* Animations */
   .fade-in {
     animation: fadeIn 0.4s ease-out;
   }
