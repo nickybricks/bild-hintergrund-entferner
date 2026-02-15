@@ -24,7 +24,7 @@ const ResultView = ({ locale, resultUrl, onReset }: ResultViewProps) => {
   };
 
   return (
-    <div className="slide-up w-full max-w-lg mx-auto">
+    <div className="slide-up w-full max-w-[600px] mx-auto">
       <div className="glass-card-lg overflow-hidden">
         <div className="checkerboard p-4">
           <img
@@ -43,7 +43,7 @@ const ResultView = ({ locale, resultUrl, onReset }: ResultViewProps) => {
           </button>
           <button
             onClick={() => { vibrate(); onReset(); }}
-            className="glass-button flex items-center justify-center gap-2 px-4 py-3 font-medium text-sm text-foreground"
+            className="flex items-center justify-center gap-2 px-4 py-3 font-medium text-sm text-primary border border-primary/40 hover:border-primary rounded-2xl transition-all hover:bg-primary/5"
           >
             <RefreshCw size={18} />
             {t.newImage}
