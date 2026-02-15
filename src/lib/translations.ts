@@ -2,7 +2,7 @@ export type Locale = 'de' | 'en';
 
 export const translations = {
   de: {
-    title: 'Background Remover',
+    title: 'Bild Hintergrund entfernen – kostenlos & ohne Anmeldung',
     subtitle: 'Entferne Bildhintergründe direkt im Browser – kostenlos & privat.',
     dropzone: 'Bild hierher ziehen',
     dropzoneOr: 'oder',
@@ -23,7 +23,7 @@ export const translations = {
     errorGeneric: 'Fehler bei der Verarbeitung',
   },
   en: {
-    title: 'Background Remover',
+    title: 'Remove Image Background – Free & No Signup',
     subtitle: 'Remove image backgrounds right in your browser – free & private.',
     dropzone: 'Drop image here',
     dropzoneOr: 'or',
