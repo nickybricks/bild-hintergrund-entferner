@@ -66,7 +66,7 @@ const Index = () => {
       <main className="flex-1 flex flex-col items-center px-4 pt-12 sm:pt-20">
         <div className="w-full max-w-[800px] mx-auto">
           <div className="text-center mb-10 fade-in">
-            <h1 className="text-3xl sm:text-4xl font-bold text-foreground tracking-tight">
+            <h1 className="text-2xl sm:text-3xl md:text-4xl font-bold text-foreground tracking-tight">
               {t.title}
             </h1>
             <p className="text-muted-foreground text-sm sm:text-base mt-2">{t.subtitle}</p>
