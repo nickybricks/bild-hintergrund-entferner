@@ -21,6 +21,32 @@ export const translations = {
     errorSize: 'Datei ist zu groß (max. 10 MB)',
     errorFormat: 'Ungültiges Format (PNG, JPG oder WEBP)',
     errorGeneric: 'Fehler bei der Verarbeitung',
+
+    // Section 1 – Why bgrnd.de
+    whyTitle: 'Warum bgrnd.de?',
+    whyPrivateTitle: '100% Privat',
+    whyPrivateText: 'Deine Bilder verlassen niemals deinen Browser. Keine Uploads, keine Server, keine Cloud.',
+    whyFreeTitle: 'Komplett kostenlos',
+    whyFreeText: 'Keine versteckten Kosten, keine Limits, keine Registrierung. Unbegrenzt Bilder freistellen.',
+    whyGdprTitle: 'DSGVO-konform',
+    whyGdprText: 'Gehostet in Deutschland. Kein Tracking, keine Cookies, keine Datenübertragung.',
+    whyMobileTitle: 'Überall nutzbar',
+    whyMobileText: 'Funktioniert auf Desktop, Tablet und Smartphone. Keine Installation nötig.',
+
+    // Section 2 – FAQ
+    faqTitle: 'Häufige Fragen',
+    faqQ1: 'Ist bgrnd.de wirklich kostenlos?',
+    faqA1: 'Ja, bgrnd.de ist 100% kostenlos. Es gibt keine versteckten Kosten, keine Premium-Version und keine Begrenzung der Bildanzahl. Du kannst so viele Bilder freistellen wie du möchtest.',
+    faqQ2: 'Werden meine Bilder auf einen Server hochgeladen?',
+    faqA2: 'Nein. Die gesamte Bildverarbeitung findet direkt in deinem Browser statt, mithilfe von KI und WebAssembly. Deine Bilder verlassen niemals dein Gerät – kein Upload, kein Server, 100% privat.',
+    faqQ3: 'Welche Bildformate werden unterstützt?',
+    faqA3: 'bgrnd.de unterstützt alle gängigen Formate: JPG, JPEG, PNG, WebP und BMP. Das Ergebnis wird immer als PNG mit transparentem Hintergrund ausgegeben.',
+    faqQ4: 'Wie gut ist die Qualität der Freistellung?',
+    faqA4: 'bgrnd.de nutzt ein neuronales Netzwerk (KI-Modell), das speziell für Bildsegmentierung trainiert wurde. Es erkennt feine Details wie Haare, Fell und komplexe Ränder. Die Ausgabe erfolgt in voller Originalauflösung.',
+    faqQ5: 'Funktioniert bgrnd.de auf dem Handy?',
+    faqA5: 'Ja, bgrnd.de ist vollständig für iOS und Android optimiert. Du kannst Bilder direkt aus deiner Galerie auswählen. Die Verarbeitung dauert auf dem Handy etwas länger als auf dem Desktop.',
+    faqQ6: 'Was bedeutet DSGVO-konform?',
+    faqA6: 'DSGVO steht für Datenschutz-Grundverordnung. Da bei bgrnd.de keine Bilder übertragen werden und kein Tracking stattfindet, ist die Nutzung vollständig DSGVO-konform. Die Website wird in Deutschland gehostet.',
   },
   en: {
     title: 'Remove Image Background – Free & No Signup',
@@ -42,6 +68,32 @@ export const translations = {
     errorSize: 'File is too large (max 10 MB)',
     errorFormat: 'Invalid format (PNG, JPG, or WEBP)',
     errorGeneric: 'Error during processing',
+
+    // Section 1 – Why bgrnd.de
+    whyTitle: 'Why bgrnd.de?',
+    whyPrivateTitle: '100% Private',
+    whyPrivateText: 'Your images never leave your browser. No uploads, no servers, no cloud.',
+    whyFreeTitle: 'Completely free',
+    whyFreeText: 'No hidden costs, no limits, no registration. Remove backgrounds from unlimited images.',
+    whyGdprTitle: 'GDPR compliant',
+    whyGdprText: 'Hosted in Germany. No tracking, no cookies, no data transfers.',
+    whyMobileTitle: 'Works everywhere',
+    whyMobileText: 'Works on desktop, tablet, and smartphone. No installation required.',
+
+    // Section 2 – FAQ
+    faqTitle: 'Frequently Asked Questions',
+    faqQ1: 'Is bgrnd.de really free?',
+    faqA1: 'Yes, bgrnd.de is 100% free. There are no hidden costs, no premium version, and no limit on the number of images. You can remove backgrounds from as many images as you like.',
+    faqQ2: 'Are my images uploaded to a server?',
+    faqA2: 'No. All image processing happens directly in your browser using AI and WebAssembly. Your images never leave your device – no upload, no server, 100% private.',
+    faqQ3: 'Which image formats are supported?',
+    faqA3: 'bgrnd.de supports all common formats: JPG, JPEG, PNG, WebP, and BMP. The result is always output as a PNG with a transparent background.',
+    faqQ4: 'How good is the cutout quality?',
+    faqA4: 'bgrnd.de uses a neural network (AI model) specifically trained for image segmentation. It detects fine details like hair, fur, and complex edges. Output is in full original resolution.',
+    faqQ5: 'Does bgrnd.de work on mobile?',
+    faqA5: 'Yes, bgrnd.de is fully optimized for iOS and Android. You can select images directly from your gallery. Processing takes a bit longer on mobile than on desktop.',
+    faqQ6: 'What does GDPR compliant mean?',
+    faqA6: 'GDPR stands for General Data Protection Regulation. Since bgrnd.de does not transfer any images and has no tracking, usage is fully GDPR compliant. The website is hosted in Germany.',
   },
 } as const;
 
