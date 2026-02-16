@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import type { Locale } from '@/lib/translations';
 
 interface FooterProps {
@@ -13,19 +14,19 @@ const Footer = ({ locale }: FooterProps) => {
         Made with ❤️ – 100% {isDE ? 'privat, kostenlos & DSGVO-konform' : 'private, free & GDPR compliant'}
       </p>
       <div className="flex items-center justify-center gap-4 mt-2">
-        <button
-          onClick={() => alert(isDE ? 'Impressum-Seite kommt bald.' : 'Imprint page coming soon.')}
+        <Link
+          to="/impressum"
           className="text-muted-foreground hover:text-foreground text-xs sm:text-sm transition-colors underline-offset-2 hover:underline"
         >
           {isDE ? 'Impressum' : 'Imprint'}
-        </button>
+        </Link>
         <span className="text-muted-foreground text-xs">·</span>
-        <button
-          onClick={() => alert(isDE ? 'Datenschutz-Seite kommt bald.' : 'Privacy policy page coming soon.')}
+        <Link
+          to="/datenschutz"
           className="text-muted-foreground hover:text-foreground text-xs sm:text-sm transition-colors underline-offset-2 hover:underline"
         >
           {isDE ? 'Datenschutz' : 'Privacy'}
-        </button>
+        </Link>
       </div>
     </footer>
   );
