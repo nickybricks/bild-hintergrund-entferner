@@ -8,6 +8,8 @@ import UploadZone from '@/components/UploadZone';
 import ProcessingView from '@/components/ProcessingView';
 import ResultView from '@/components/ResultView';
 import FeatureBadges from '@/components/FeatureBadges';
+import WhySection from '@/components/WhySection';
+import FAQSection from '@/components/FAQSection';
 
 type AppState = 'upload' | 'processing' | 'result';
 
@@ -90,6 +92,9 @@ const Index = () => {
 
           <FeatureBadges locale={locale} />
         </div>
+
+        <WhySection locale={locale} />
+        <FAQSection locale={locale} />
       </main>
 
       <Footer locale={locale} />
