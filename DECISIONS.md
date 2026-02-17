@@ -116,9 +116,12 @@
 - [x] Dark Mode mit Persistenz
 - [x] Zweisprachig (DE/EN)
 - [x] Liquid Glass Design-System
+- [x] Impressum & Datenschutz als eigene Seiten (/impressum, /datenschutz)
+- [x] SEO-Content-Sections (Why-Section, FAQ-Accordion)
+- [x] Schema.org JSON-LD (WebApplication + FAQPage)
+- [x] Google Analytics (G-8JNDXEPL0H)
 
 ### Phase 2: Erweiterungen
-- [ ] Impressum & Datenschutz als eigene Seiten/Modals
 - [ ] Batch-Verarbeitung (mehrere Bilder gleichzeitig)
 - [ ] Hintergrund ersetzen (Farbe oder Bild)
 - [ ] Bild-Zuschnitt nach Entfernung
@@ -129,12 +132,11 @@
 - [ ] WebGPU-Backend wenn verfügbar (deutlich schneller als WASM)
 - [ ] Bildkomprimierung vor Verarbeitung bei großen Dateien
 - [ ] Performance-Monitoring
-- [ ] SEO-Optimierung (Meta-Tags, JSON-LD, OG-Images)
+- [ ] OG-Image erstellen (1200x630px)
 
 ### Offene Punkte
-- Impressum/Datenschutz-Seiten sind noch Placeholder (Alert)
+- Datenschutz-Text erwähnt "kein Tracking" – muss ggf. angepasst werden wegen Google Analytics
 - Kein Error-Boundary für unerwartete Fehler
-- Keine Analytics/Tracking implementiert
 
 ---
 
@@ -143,4 +145,9 @@
 ### 2026-02-15
 - **Stand:** MVP komplett, Design-Overhaul abgeschlossen
 - **Gelöst:** onnxruntime-web Kompatibilitätsproblem (Version 1.20.1 + backend: 'wasm' erzwungen)
-- **Nächste Schritte:** Impressum/Datenschutz-Seiten erstellen, End-to-End-Test der Hintergrundentfernung
+
+### 2026-02-17
+- **Stand:** SEO-Sections (WhySection + FAQSection) hinzugefügt, Impressum & Datenschutz als eigene Routes erstellt, Google Analytics Tag eingefügt
+- **Erledigt:** i18n für alle neuen Texte (DE/EN), Schema.org FAQPage JSON-LD, Footer-Links zu /impressum und /datenschutz
+- **Offener Punkt:** Datenschutz-Text prüfen/anpassen wegen GA-Tracking
+- **Nächste Schritte:** OG-Image erstellen, Datenschutz-Text aktualisieren, ggf. Cookie-Banner
