@@ -149,5 +149,5 @@
 ### 2026-02-17
 - **Stand:** SEO-Sections (WhySection + FAQSection) hinzugefügt, Impressum & Datenschutz als eigene Routes erstellt, Google Analytics Tag eingefügt
 - **Erledigt:** i18n für alle neuen Texte (DE/EN), Schema.org FAQPage JSON-LD, Footer-Links zu /impressum und /datenschutz
-- **Offener Punkt:** Datenschutz-Text prüfen/anpassen wegen GA-Tracking
-- **Nächste Schritte:** OG-Image erstellen, Datenschutz-Text aktualisieren, ggf. Cookie-Banner
+- **Update:** Datenschutzseite um Google-Analytics-Abschnitt erweitert (Rechtsgrundlage Art. 6 Abs. 1 lit. f DSGVO, IP-Anonymisierung, Opt-out-Link). WhySection- und FAQ-Texte angepasst, damit keine falschen "kein Tracking"-Aussagen mehr stehen.
+- **Nächste Schritte:** OG-Image erstellen, ggf. Cookie-Banner implementieren
