@@ -58,18 +58,29 @@ const Datenschutz = () => {
 
               <section>
                 <h2 className="font-semibold text-lg mb-2">
-                  {isDE ? '3. Keine Datenerhebung' : '3. No Data Collection'}
+                  {isDE ? '3. Google Analytics' : '3. Google Analytics'}
                 </h2>
                 <p className="text-muted-foreground">
                   {isDE
-                    ? 'bgrnd.de verwendet keine Cookies, kein Tracking, keine Analyse-Tools und keine Werbung. Es werden keine personenbezogenen Daten an Dritte übermittelt. Die einzige lokale Speicherung (localStorage) dient der Speicherung deiner Theme-Einstellung (hell/dunkel).'
-                    : 'bgrnd.de does not use cookies, tracking, analytics tools, or advertising. No personal data is transmitted to third parties. The only local storage (localStorage) is used to save your theme preference (light/dark).'}
+                    ? 'Diese Website nutzt Google Analytics 4, einen Webanalysedienst der Google Ireland Limited („Google"). Google Analytics verwendet Cookies und ähnliche Technologien, um die Nutzung der Website zu analysieren. Die dabei erzeugten Informationen über Ihre Benutzung dieser Website werden in der Regel an einen Server von Google übertragen und dort gespeichert. Wir nutzen die IP-Anonymisierung, sodass Ihre IP-Adresse von Google innerhalb der EU/EWR gekürzt wird. Die Nutzung erfolgt auf Grundlage unseres berechtigten Interesses an der statistischen Analyse des Nutzerverhaltens (Art. 6 Abs. 1 lit. f DSGVO). Sie können die Erfassung durch Google Analytics verhindern, indem Sie ein Browser-Add-on installieren: https://tools.google.com/dlpage/gaoptout'
+                    : 'This website uses Google Analytics 4, a web analytics service provided by Google Ireland Limited ("Google"). Google Analytics uses cookies and similar technologies to analyze the use of the website. The information generated about your use of this website is usually transferred to a Google server and stored there. We use IP anonymization, so your IP address is truncated by Google within the EU/EEA. Usage is based on our legitimate interest in statistical analysis of user behavior (Art. 6(1)(f) GDPR). You can prevent tracking by Google Analytics by installing a browser add-on: https://tools.google.com/dlpage/gaoptout'}
                 </p>
               </section>
 
               <section>
                 <h2 className="font-semibold text-lg mb-2">
-                  {isDE ? '4. Bildverarbeitung' : '4. Image Processing'}
+                  {isDE ? '4. Lokale Speicherung' : '4. Local Storage'}
+                </h2>
+                <p className="text-muted-foreground">
+                  {isDE
+                    ? 'Abgesehen von Google Analytics erhebt bgrnd.de keine weiteren personenbezogenen Daten. Die einzige zusätzliche lokale Speicherung (localStorage) dient der Speicherung deiner Theme-Einstellung (hell/dunkel).'
+                    : 'Apart from Google Analytics, bgrnd.de does not collect any additional personal data. The only additional local storage (localStorage) is used to save your theme preference (light/dark).'}
+                </p>
+              </section>
+
+              <section>
+                <h2 className="font-semibold text-lg mb-2">
+                  {isDE ? '5. Bildverarbeitung' : '5. Image Processing'}
                 </h2>
                 <p className="text-muted-foreground">
                   {isDE
@@ -80,7 +91,7 @@ const Datenschutz = () => {
 
               <section>
                 <h2 className="font-semibold text-lg mb-2">
-                  {isDE ? '5. Hosting' : '5. Hosting'}
+                  {isDE ? '6. Hosting' : '6. Hosting'}
                 </h2>
                 <p className="text-muted-foreground">
                   {isDE
@@ -91,7 +102,7 @@ const Datenschutz = () => {
 
               <section>
                 <h2 className="font-semibold text-lg mb-2">
-                  {isDE ? '6. Deine Rechte' : '6. Your Rights'}
+                  {isDE ? '7. Deine Rechte' : '7. Your Rights'}
                 </h2>
                 <p className="text-muted-foreground">
                   {isDE

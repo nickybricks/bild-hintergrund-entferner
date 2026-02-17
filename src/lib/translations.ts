@@ -29,7 +29,7 @@ export const translations = {
     whyFreeTitle: 'Komplett kostenlos',
     whyFreeText: 'Keine versteckten Kosten, keine Limits, keine Registrierung. Unbegrenzt Bilder freistellen.',
     whyGdprTitle: 'DSGVO-konform',
-    whyGdprText: 'Gehostet in Deutschland. Kein Tracking, keine Cookies, keine Datenübertragung.',
+    whyGdprText: 'Gehostet in Deutschland. Keine Datenübertragung deiner Bilder.',
     whyMobileTitle: 'Überall nutzbar',
     whyMobileText: 'Funktioniert auf Desktop, Tablet und Smartphone. Keine Installation nötig.',
 
@@ -46,7 +46,7 @@ export const translations = {
     faqQ5: 'Funktioniert bgrnd.de auf dem Handy?',
     faqA5: 'Ja, bgrnd.de ist vollständig für iOS und Android optimiert. Du kannst Bilder direkt aus deiner Galerie auswählen. Die Verarbeitung dauert auf dem Handy etwas länger als auf dem Desktop.',
     faqQ6: 'Was bedeutet DSGVO-konform?',
-    faqA6: 'DSGVO steht für Datenschutz-Grundverordnung. Da bei bgrnd.de keine Bilder übertragen werden und kein Tracking stattfindet, ist die Nutzung vollständig DSGVO-konform. Die Website wird in Deutschland gehostet.',
+    faqA6: 'DSGVO steht für Datenschutz-Grundverordnung. Da bei bgrnd.de keine Bilder übertragen werden, ist die Nutzung datenschutzfreundlich. Wir nutzen Google Analytics zur Nutzungsanalyse – Details findest du in unserer Datenschutzerklärung. Die Website wird in Deutschland gehostet.',
   },
   en: {
     title: 'Remove Image Background – Free & No Signup',
@@ -76,7 +76,7 @@ export const translations = {
     whyFreeTitle: 'Completely free',
     whyFreeText: 'No hidden costs, no limits, no registration. Remove backgrounds from unlimited images.',
     whyGdprTitle: 'GDPR compliant',
-    whyGdprText: 'Hosted in Germany. No tracking, no cookies, no data transfers.',
+    whyGdprText: 'Hosted in Germany. No transfer of your image data.',
     whyMobileTitle: 'Works everywhere',
     whyMobileText: 'Works on desktop, tablet, and smartphone. No installation required.',
 
@@ -93,7 +93,7 @@ export const translations = {
     faqQ5: 'Does bgrnd.de work on mobile?',
     faqA5: 'Yes, bgrnd.de is fully optimized for iOS and Android. You can select images directly from your gallery. Processing takes a bit longer on mobile than on desktop.',
     faqQ6: 'What does GDPR compliant mean?',
-    faqA6: 'GDPR stands for General Data Protection Regulation. Since bgrnd.de does not transfer any images and has no tracking, usage is fully GDPR compliant. The website is hosted in Germany.',
+    faqA6: 'GDPR stands for General Data Protection Regulation. Since bgrnd.de does not transfer any images, usage is privacy-friendly. We use Google Analytics for usage analysis – see our privacy policy for details. The website is hosted in Germany.',
   },
 } as const;
 
