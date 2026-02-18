@@ -160,4 +160,15 @@
   - FAQ von 6 auf 7 Fragen erweitert (+ "Unterschied zu remove.bg"), Antworten für Featured Snippets optimiert
   - JSON-LD FAQPage-Schema in index.html um Q7 ergänzt und alle Antworten aktualisiert
   - Alle neuen Texte vollständig in DE + EN übersetzt
-- **Nächste Schritte:** OG-Image erstellen, ggf. Cookie-Banner implementieren
+- **Update:** Blog-/Ratgeber-Infrastruktur aufgebaut:
+  - react-helmet-async für per-page Meta-Tags (Title, Description, OG, Canonical)
+  - Blog-Datenmodell (blogData.ts) mit Posts-Array, Slugs, DE/EN-Titeln, Related Posts
+  - Blog-Content (blogContent.ts) mit 3 Artikeln in DE + EN (HTML mit H2/H3-IDs für TOC)
+  - BlogOverview (/blog) mit Grid-Cards, Breadcrumbs, SEO-Meta
+  - BlogPost (/blog/:slug) mit auto-generiertem Inhaltsverzeichnis, Breadcrumbs, CTA-Banner, verwandten Artikeln
+  - Breadcrumbs-Komponente wiederverwendbar
+  - Footer um Blog-Link erweitert
+  - sitemap.xml mit allen Blog-URLs aktualisiert
+  - prose-custom CSS-Klasse für Blog-Content-Styling
+  - HelmetProvider in App.tsx integriert
+- **Nächste Schritte:** OG-Image erstellen, Cookie-Banner, weitere Blog-Artikel
