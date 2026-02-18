@@ -151,4 +151,13 @@
 - **Erledigt:** i18n für alle neuen Texte (DE/EN), Schema.org FAQPage JSON-LD, Footer-Links zu /impressum und /datenschutz
 - **Update:** Datenschutzseite um Google-Analytics-Abschnitt erweitert (Rechtsgrundlage Art. 6 Abs. 1 lit. f DSGVO, IP-Anonymisierung, Opt-out-Link). WhySection- und FAQ-Texte angepasst, damit keine falschen "kein Tracking"-Aussagen mehr stehen.
 - **Update 2:** LICENSE (MIT, nickybricks 2026) und README.md (Projektbeschreibung, Tech-Stack, Setup-Anleitung) erstellt.
+
+### 2026-02-18
+- **Stand:** SEO-Content massiv erweitert für besseres Google-Ranking
+- **Erledigt:**
+  - Neue SEOContent-Komponente mit 3 Sektionen: Intro-Text (~100 Wörter, keyword-optimiert), 3-Schritte-Erklärung mit Icons, Anwendungsfälle mit Tags
+  - WhySection von 4 auf 6 Feature-Cards erweitert (+ "Direkt im Browser", "Hohe Qualität durch KI"), Grid auf 3 Spalten auf Desktop
+  - FAQ von 6 auf 7 Fragen erweitert (+ "Unterschied zu remove.bg"), Antworten für Featured Snippets optimiert
+  - JSON-LD FAQPage-Schema in index.html um Q7 ergänzt und alle Antworten aktualisiert
+  - Alle neuen Texte vollständig in DE + EN übersetzt
 - **Nächste Schritte:** OG-Image erstellen, ggf. Cookie-Banner implementieren

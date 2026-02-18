@@ -10,6 +10,7 @@ import ResultView from '@/components/ResultView';
 import FeatureBadges from '@/components/FeatureBadges';
 import WhySection from '@/components/WhySection';
 import FAQSection from '@/components/FAQSection';
+import SEOContent from '@/components/SEOContent';
 
 type AppState = 'upload' | 'processing' | 'result';
 
@@ -93,6 +94,7 @@ const Index = () => {
           <FeatureBadges locale={locale} />
         </div>
 
+        <SEOContent locale={locale} />
         <WhySection locale={locale} />
         <FAQSection locale={locale} />
       </main>
