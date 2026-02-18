@@ -15,13 +15,6 @@ const Footer = ({ locale }: FooterProps) => {
       </p>
       <div className="flex items-center justify-center gap-4 mt-2">
         <Link
-          to="/blog"
-          className="text-muted-foreground hover:text-foreground text-xs sm:text-sm transition-colors underline-offset-2 hover:underline"
-        >
-          {isDE ? 'Ratgeber' : 'Guide'}
-        </Link>
-        <span className="text-muted-foreground text-xs">·</span>
-        <Link
           to="/impressum"
           className="text-muted-foreground hover:text-foreground text-xs sm:text-sm transition-colors underline-offset-2 hover:underline"
         >
