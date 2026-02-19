@@ -1,5 +1,10 @@
 import type { Locale } from '@/lib/translations';
 
+import { hintergrundEntfernenKostenlos } from './blogContent/hintergrund-entfernen-kostenlos';
+import { produktfotosFreistellen } from './blogContent/produktfotos-freistellen';
+import { bewerbungsfotoHintergrundAendern } from './blogContent/bewerbungsfoto-hintergrund-aendern';
+import { passfotoHintergrundEntfernen } from './blogContent/passfoto-hintergrund-entfernen';
+
 type BlogContentMap = Record<string, Record<Locale, string>>;
 
 export const blogPostContent: BlogContentMap = {
@@ -41,7 +46,7 @@ export const blogPostContent: BlogContentMap = {
 <p>Nach dem Download kannst du sofort das nächste Bild bearbeiten. Es gibt keine Begrenzung – freistellen so oft du möchtest, komplett kostenlos.</p>
 
 <h2 id="fazit">Fazit</h2>
-<p>Mit diesen Tipps holst du das Maximum aus der KI-gestützten Hintergrundentfernung heraus. Probiere es direkt aus – kostenlos und ohne Anmeldung auf bgrnd.de.</p>
+<p>Mit diesen Tipps holst du das Maximum aus der KI-gestützten Hintergrundentfernung heraus. Probiere es direkt aus – kostenlos und ohne Anmeldung auf <a href="/">bgrnd.de</a>.</p>
 `,
     en: `
 <h2 id="warum-hintergrund-entfernen">Why Remove Backgrounds?</h2>
@@ -80,66 +85,7 @@ export const blogPostContent: BlogContentMap = {
 <p>After downloading, you can immediately process the next image. There's no limit – remove backgrounds as often as you like, completely free.</p>
 
 <h2 id="fazit">Conclusion</h2>
-<p>With these tips, you'll get the most out of AI-powered background removal. Try it now – free and without signup on bgrnd.de.</p>
-`,
-  },
-
-  'produktfotos-freistellen': {
-    de: `
-<h2 id="warum-produktfotos">Warum Produktfotos freistellen?</h2>
-<p>Online-Marktplätze wie Amazon, eBay und Etsy verlangen oft Produktbilder mit weißem oder transparentem Hintergrund. Freigestellte Produktfotos wirken professioneller, lenken nicht vom Produkt ab und erhöhen die Klickrate und Conversion.</p>
-
-<h2 id="anforderungen">Anforderungen der großen Plattformen</h2>
-
-<h3 id="amazon">Amazon</h3>
-<p>Amazon verlangt für das Hauptbild einen reinweißen Hintergrund (RGB 255, 255, 255). Das Produkt muss mindestens 85% des Bildrahmens ausfüllen. Mit bgrnd.de kannst du den Hintergrund entfernen und das Ergebnis dann auf weißem Hintergrund platzieren.</p>
-
-<h3 id="ebay">eBay</h3>
-<p>eBay empfiehlt ebenfalls einen weißen oder hellen Hintergrund. Freigestellte Produktfotos verbessern die Sichtbarkeit in der Suche und wirken vertrauenswürdiger.</p>
-
-<h3 id="eigener-shop">Eigener Online-Shop</h3>
-<p>Für deinen eigenen Shop bieten freigestellte Bilder maximale Flexibilität: Du kannst den Hintergrund an dein Branding anpassen, verschiedene Farben testen oder das Produkt in Lifestyle-Szenen einfügen.</p>
-
-<h2 id="schritt-fuer-schritt">Schritt-für-Schritt-Anleitung</h2>
-<p>1. Fotografiere dein Produkt mit guter Beleuchtung vor einem möglichst einfarbigen Hintergrund.<br>
-2. Öffne bgrnd.de und lade dein Produktfoto hoch.<br>
-3. Die KI entfernt automatisch den Hintergrund – in Sekunden.<br>
-4. Lade das Ergebnis als PNG mit transparentem Hintergrund herunter.<br>
-5. Platziere das freigestellte Produkt in deiner gewünschten Umgebung.</p>
-
-<h2 id="tipps-produktfotos">Tipps für bessere Produktfotos</h2>
-<p>Verwende eine gleichmäßige, diffuse Beleuchtung. Fotografiere auf einem einfarbigen Hintergrund (weiß, grau oder grün). Achte auf eine hohe Auflösung und vermeide starke Schatten. Bei reflektierenden Produkten hilft eine Lichtbox.</p>
-
-<h2 id="fazit">Fazit</h2>
-<p>Mit bgrnd.de sparst du Zeit und Geld bei der Produktfotografie. Kein Photoshop, keine teuren Bildbearbeitungsdienste – einfach Bild hochladen und freistellen lassen.</p>
-`,
-    en: `
-<h2 id="warum-produktfotos">Why Cut Out Product Photos?</h2>
-<p>Online marketplaces like Amazon, eBay, and Etsy often require product images with white or transparent backgrounds. Cut-out product photos look more professional, don't distract from the product, and increase click-through rates and conversion.</p>
-
-<h2 id="anforderungen">Platform Requirements</h2>
-
-<h3 id="amazon">Amazon</h3>
-<p>Amazon requires a pure white background (RGB 255, 255, 255) for the main image. The product must fill at least 85% of the frame. With bgrnd.de, you can remove the background and place the result on a white background.</p>
-
-<h3 id="ebay">eBay</h3>
-<p>eBay also recommends white or light backgrounds. Cut-out product photos improve search visibility and appear more trustworthy.</p>
-
-<h3 id="eigener-shop">Your Own Shop</h3>
-<p>For your own shop, cut-out images offer maximum flexibility: adapt the background to your branding, test different colors, or place the product in lifestyle scenes.</p>
-
-<h2 id="schritt-fuer-schritt">Step-by-Step Guide</h2>
-<p>1. Photograph your product with good lighting against a solid-colored background.<br>
-2. Open bgrnd.de and upload your product photo.<br>
-3. The AI automatically removes the background – in seconds.<br>
-4. Download the result as PNG with transparent background.<br>
-5. Place the cut-out product in your desired setting.</p>
-
-<h2 id="tipps-produktfotos">Tips for Better Product Photos</h2>
-<p>Use even, diffused lighting. Photograph on a solid background (white, gray, or green). Ensure high resolution and avoid harsh shadows. For reflective products, a light box helps.</p>
-
-<h2 id="fazit">Conclusion</h2>
-<p>With bgrnd.de, you save time and money on product photography. No Photoshop, no expensive editing services – just upload and cut out.</p>
+<p>With these tips, you'll get the most out of AI-powered background removal. Try it now – free and without signup on <a href="/">bgrnd.de</a>.</p>
 `,
   },
 
@@ -176,7 +122,7 @@ export const blogPostContent: BlogContentMap = {
 <p>Wenn dir Datenschutz wichtig ist und du ein komplett kostenloses Tool ohne Einschränkungen suchst, ist bgrnd.de die beste Wahl. Für professionelle Bildbearbeitung mit manueller Kontrolle bleibt Photoshop das Maß der Dinge – allerdings zu einem deutlich höheren Preis.</p>
 
 <h2 id="fazit">Fazit</h2>
-<p>Für die meisten Anwendungsfälle bietet bgrnd.de das beste Gesamtpaket: kostenlos, privat, schnell und in guter Qualität. Teste es direkt aus – ohne Anmeldung und ohne Limit.</p>
+<p>Für die meisten Anwendungsfälle bietet bgrnd.de das beste Gesamtpaket: kostenlos, privat, schnell und in guter Qualität. Teste es direkt aus – ohne Anmeldung und ohne Limit auf <a href="/">bgrnd.de</a>.</p>
 `,
     en: `
 <h2 id="ueberblick">Image Cutout: The Best Free Tools</h2>
@@ -210,7 +156,12 @@ export const blogPostContent: BlogContentMap = {
 <p>If privacy matters to you and you're looking for a completely free tool without restrictions, bgrnd.de is the best choice. For professional image editing with manual control, Photoshop remains the gold standard – but at a significantly higher price.</p>
 
 <h2 id="fazit">Conclusion</h2>
-<p>For most use cases, bgrnd.de offers the best overall package: free, private, fast, and good quality. Try it now – without signup and without limits.</p>
+<p>For most use cases, bgrnd.de offers the best overall package: free, private, fast, and good quality. Try it now – without signup and without limits on <a href="/">bgrnd.de</a>.</p>
 `,
   },
+
+  'hintergrund-entfernen-kostenlos': hintergrundEntfernenKostenlos,
+  'produktfotos-freistellen': produktfotosFreistellen,
+  'bewerbungsfoto-hintergrund-aendern': bewerbungsfotoHintergrundAendern,
+  'passfoto-hintergrund-entfernen': passfotoHintergrundEntfernen,
 };
