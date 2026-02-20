@@ -11,7 +11,7 @@
 
 ### Edge Cases
 - Datei zu groß (>10 MB) → Fehlermeldung
-- Falsches Format (nicht PNG/JPG/WEBP) → Fehlermeldung
+- Falsches Format (nicht PNG/JPG/WEBP/AVIF) → Fehlermeldung
 - Bild zu groß (>4096×4096px) → Verarbeitung schlägt fehl, Fehlermeldung
 - Modell-Download fehlgeschlagen → Catch mit lokalisierter Fehlermeldung
 - Browser ohne WASM-Support → Graceful Degradation (nicht explizit behandelt)
@@ -170,6 +170,7 @@
   - sitemap.xml mit allen Blog-URLs aktualisiert
   - prose-custom CSS-Klasse für Blog-Content-Styling
   - HelmetProvider in App.tsx integriert
+<<<<<<< HEAD
 
 ### 2026-02-20
 - **Stand:** Blog-Content ausgebaut, Design-Polish
@@ -184,3 +185,12 @@
   - sitemap.xml um alle neuen Blog-URLs ergänzt
   - Dot-Background-Pattern: horizontaler Fade von Rändern zur Mitte via `mask-image` auf `::before` Pseudo-Element, mittlerer Bereich frei für bessere Lesbarkeit
 - **Nächste Schritte:** OG-Image erstellen, Cookie-Banner, JSON-LD Article Schema pro Blog-Post
+=======
+- **Nächste Schritte:** OG-Image erstellen, Cookie-Banner, weitere Blog-Artikel
+
+### 2026-02-20
+- **Erledigt:**
+  - AVIF als unterstütztes Eingabeformat hinzugefügt (MIME-Type `image/avif` + `.avif` Dateiendung in UploadZone)
+  - `/llms.txt` erstellt (public/) mit Projektbeschreibung für LLM-Crawler
+  - `robots.txt` um `LLMs-txt`-Verweis auf `https://bgrnd.de/llms.txt` ergänzt
+>>>>>>> 11415b2 (modified:   DECISIONS.md)
