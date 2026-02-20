@@ -10,7 +10,7 @@ interface UploadZoneProps {
 }
 
 const MAX_SIZE = 10 * 1024 * 1024;
-const ACCEPTED = ['image/png', 'image/jpeg', 'image/webp'];
+const ACCEPTED = ['image/png', 'image/jpeg', 'image/webp', 'image/avif'];
 
 const UploadZone = ({ locale, onFileSelected, onError }: UploadZoneProps) => {
   const t = translations[locale];
@@ -93,7 +93,7 @@ const UploadZone = ({ locale, onFileSelected, onError }: UploadZoneProps) => {
       <input
         ref={inputRef}
         type="file"
-        accept=".png,.jpg,.jpeg,.webp"
+        accept=".png,.jpg,.jpeg,.webp,.avif"
         onChange={handleInputChange}
         className="hidden"
       />
