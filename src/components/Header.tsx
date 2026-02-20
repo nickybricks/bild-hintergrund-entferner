@@ -18,7 +18,7 @@ const Header = ({ locale, theme, onToggleLocale, onToggleTheme }: HeaderProps) =
       {/* Desktop */}
       <div className="hidden md:flex items-center justify-between">
         <div className="glass-pill flex items-center gap-2 px-5 py-2">
-          <span className="font-semibold text-foreground">BG Remover</span>
+          <span className="font-semibold text-foreground">bg.</span>
           <Sparkles size={16} className="text-primary" />
         </div>
 
@@ -44,7 +44,7 @@ const Header = ({ locale, theme, onToggleLocale, onToggleTheme }: HeaderProps) =
       {/* Mobile */}
       <div className="md:hidden flex items-center justify-center mt-1">
         <div className="glass-pill flex items-center gap-3 px-4 py-2">
-          <span className="font-semibold text-foreground text-sm">BG Remover</span>
+          <span className="font-semibold text-foreground text-sm">bg.</span>
           <Sparkles size={14} className="text-primary" />
           <div className="w-px h-5 bg-border" />
           <button
