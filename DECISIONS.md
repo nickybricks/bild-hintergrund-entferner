@@ -163,7 +163,6 @@
 - **Update:** Blog-/Ratgeber-Infrastruktur aufgebaut:
   - react-helmet-async für per-page Meta-Tags (Title, Description, OG, Canonical)
   - Blog-Datenmodell (blogData.ts) mit Posts-Array, Slugs, DE/EN-Titeln, Related Posts
-  - Blog-Content (blogContent.ts) mit 3 Artikeln in DE + EN (HTML mit H2/H3-IDs für TOC)
   - BlogOverview (/blog) mit Grid-Cards, Breadcrumbs, SEO-Meta
   - BlogPost (/blog/:slug) mit auto-generiertem Inhaltsverzeichnis, Breadcrumbs, CTA-Banner, verwandten Artikeln
   - Breadcrumbs-Komponente wiederverwendbar
@@ -171,4 +170,17 @@
   - sitemap.xml mit allen Blog-URLs aktualisiert
   - prose-custom CSS-Klasse für Blog-Content-Styling
   - HelmetProvider in App.tsx integriert
-- **Nächste Schritte:** OG-Image erstellen, Cookie-Banner, weitere Blog-Artikel
+
+### 2026-02-20
+- **Stand:** Blog-Content ausgebaut, Design-Polish
+- **Erledigt:**
+  - 4 neue Blog-Artikel erstellt (DE + EN), modulare Dateistruktur unter `src/lib/blogContent/`:
+    - `/blog/hintergrund-entfernen-kostenlos` – Vergleichsartikel mit Tabelle (~1.400 Wörter)
+    - `/blog/produktfotos-freistellen` – E-Commerce-Guide (~1.200 Wörter)
+    - `/blog/bewerbungsfoto-hintergrund-aendern` – Bewerbungsfoto-Guide (~1.000 Wörter)
+    - `/blog/passfoto-hintergrund-entfernen` – Passfoto-Guide (~900 Wörter)
+  - Blog-Content in Einzeldateien refactored (`src/lib/blogContent/*.ts`)
+  - Interne Verlinkung zwischen allen Artikeln
+  - sitemap.xml um alle neuen Blog-URLs ergänzt
+  - Dot-Background-Pattern: horizontaler Fade von Rändern zur Mitte via `mask-image` auf `::before` Pseudo-Element, mittlerer Bereich frei für bessere Lesbarkeit
+- **Nächste Schritte:** OG-Image erstellen, Cookie-Banner, JSON-LD Article Schema pro Blog-Post
