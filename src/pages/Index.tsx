@@ -42,8 +42,8 @@ const Index = () => {
       console.error('Background removal failed:', err);
       setError(
         locale === 'de'
-          ? 'Das Bild konnte nicht verarbeitet werden. Bitte versuche ein anderes Bild oder ein kleineres Format (max. 4096×4096px).'
-          : 'Could not process the image. Please try a different image or a smaller size (max 4096×4096px).'
+          ? 'Das Bild konnte nicht verarbeitet werden. Bitte versuche ein anderes Bild.'
+          : 'Could not process the image. Please try a different image.'
       );
       setState('upload');
     }
