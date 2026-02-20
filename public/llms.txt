@@ -1,0 +1,28 @@
+# bgrnd.de
+
+## Was ist bgrnd.de?
+bgrnd.de ist ein kostenloses Online-Tool zum Entfernen von Bildhintergründen. Die gesamte Verarbeitung findet direkt im Browser des Nutzers statt – es werden keine Bilder auf externe Server hochgeladen.
+
+## Kernfunktionen
+- Hintergrund von Bildern entfernen (Background Removal)
+- 100% kostenlos, keine Anmeldung erforderlich
+- DSGVO-konform: Bilder verlassen nicht das Gerät
+- Unterstützte Formate: JPG, PNG, WebP
+- Ausgabe: PNG mit transparentem Hintergrund
+- Funktioniert auf Desktop und Mobil
+
+## Zielgruppe
+- E-Commerce Händler (Amazon, eBay, Shopify)
+- Social Media Manager
+- Fotografen und Designer
+- Bewerber (Bewerbungsfotos)
+- Privatpersonen
+
+## Technologie
+- Browser-basierte KI-Bildverarbeitung
+- Keine Server-seitige Verarbeitung
+- Moderne Web-Technologien (React)
+
+## Kontakt
+- Website: https://bgrnd.de
+- Sprachen: Deutsch, Englisch

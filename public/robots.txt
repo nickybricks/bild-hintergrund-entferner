@@ -2,3 +2,6 @@ User-agent: *
 Allow: /
 
 Sitemap: https://bgrnd.de/sitemap.xml
+
+# LLM context
+LLMs-txt: https://bgrnd.de/llms.txt
