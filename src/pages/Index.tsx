@@ -58,7 +58,7 @@ const Index = () => {
   }, [resultUrl]);
 
   return (
-    <div className="dot-background min-h-screen flex flex-col">
+    <div className="dot-background min-h-screen flex flex-col [&>*]:relative [&>*]:z-10">
       <Header
         locale={locale}
         theme={theme}
