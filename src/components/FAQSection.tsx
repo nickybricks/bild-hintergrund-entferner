@@ -17,7 +17,7 @@ const FAQSection = ({ locale }: Props) => {
   const t = translations[locale];
 
   return (
-    <section className="w-full max-w-[700px] mx-auto mt-[60px]">
+    <section id="faq" className="w-full max-w-[700px] mx-auto mt-[60px]">
       <h2 className="text-xl sm:text-2xl font-bold text-foreground text-center mb-8">
         {t.faqTitle}
       </h2>

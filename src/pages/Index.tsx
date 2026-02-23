@@ -1,4 +1,4 @@
-import { useState, useCallback } from 'react';
+import { useState, useCallback, lazy, Suspense } from 'react';
 import { detectLocale, translations } from '@/lib/translations';
 import type { Locale } from '@/lib/translations';
 import { useTheme } from '@/hooks/useTheme';
@@ -8,9 +8,10 @@ import UploadZone from '@/components/UploadZone';
 import ProcessingView from '@/components/ProcessingView';
 import ResultView from '@/components/ResultView';
 import FeatureBadges from '@/components/FeatureBadges';
-import WhySection from '@/components/WhySection';
-import FAQSection from '@/components/FAQSection';
-import SEOContent from '@/components/SEOContent';
+
+const WhySection = lazy(() => import('@/components/WhySection'));
+const FAQSection = lazy(() => import('@/components/FAQSection'));
+const SEOContent = lazy(() => import('@/components/SEOContent'));
 
 type AppState = 'upload' | 'processing' | 'result';
 
@@ -94,9 +95,11 @@ const Index = () => {
           <FeatureBadges locale={locale} />
         </div>
 
-        <SEOContent locale={locale} />
-        <WhySection locale={locale} />
-        <FAQSection locale={locale} />
+        <Suspense fallback={null}>
+          <SEOContent locale={locale} />
+          <WhySection locale={locale} />
+          <FAQSection locale={locale} />
+        </Suspense>
       </main>
 
       <Footer locale={locale} />

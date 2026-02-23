@@ -25,14 +25,14 @@ const Header = ({ locale, theme, onToggleLocale, onToggleTheme }: HeaderProps) =
         <div className="glass-pill flex items-center gap-1 px-4 py-2">
           <button
             onClick={() => { vibrate(); onToggleTheme(); }}
-            className="p-2 rounded-full hover:bg-foreground/5 transition-colors"
+            className="p-2 min-w-[48px] min-h-[48px] flex items-center justify-center rounded-full hover:bg-foreground/5 transition-colors"
             aria-label="Toggle theme"
           >
             {theme === 'dark' ? <Sun size={18} className="text-foreground" /> : <Moon size={18} className="text-foreground" />}
           </button>
           <button
             onClick={() => { vibrate(); onToggleLocale(); }}
-            className="p-2 rounded-full hover:bg-foreground/5 transition-colors flex items-center gap-1.5"
+            className="p-2 min-w-[48px] min-h-[48px] flex items-center justify-center rounded-full hover:bg-foreground/5 transition-colors gap-1.5"
             aria-label="Toggle language"
           >
             <Globe size={18} className="text-foreground" />
@@ -49,14 +49,14 @@ const Header = ({ locale, theme, onToggleLocale, onToggleTheme }: HeaderProps) =
           <div className="w-px h-5 bg-border" />
           <button
             onClick={() => { vibrate(); onToggleTheme(); }}
-            className="p-1.5 rounded-full hover:bg-foreground/5 transition-colors"
+            className="p-2 min-w-[48px] min-h-[48px] flex items-center justify-center rounded-full hover:bg-foreground/5 transition-colors"
             aria-label="Toggle theme"
           >
             {theme === 'dark' ? <Sun size={16} className="text-foreground" /> : <Moon size={16} className="text-foreground" />}
           </button>
           <button
             onClick={() => { vibrate(); onToggleLocale(); }}
-            className="p-1.5 rounded-full hover:bg-foreground/5 transition-colors flex items-center gap-1"
+            className="p-2 min-w-[48px] min-h-[48px] flex items-center justify-center rounded-full hover:bg-foreground/5 transition-colors gap-1"
             aria-label="Toggle language"
           >
             <Globe size={16} className="text-foreground" />
