@@ -29,7 +29,9 @@ const ResultView = ({ locale, resultUrl, onReset }: ResultViewProps) => {
         <div className="checkerboard p-4">
           <img
             src={resultUrl}
-            alt="Result"
+            alt={locale === 'de' ? 'Bild mit entferntem Hintergrund' : 'Image with removed background'}
+            width={600}
+            height={400}
             className="w-full h-auto max-h-[60vh] object-contain rounded-xl"
           />
         </div>

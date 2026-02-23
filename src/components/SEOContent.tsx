@@ -32,7 +32,7 @@ const SEOContent = ({ locale }: Props) => {
       </section>
 
       {/* Section 2 – How it works (3 steps) */}
-      <section className="w-full max-w-[900px] mx-auto mt-[60px]">
+      <section id="how-it-works" className="w-full max-w-[900px] mx-auto mt-[60px]">
         <h2 className="text-xl sm:text-2xl font-bold text-foreground text-center mb-8">
           {t.howItWorksTitle}
         </h2>
