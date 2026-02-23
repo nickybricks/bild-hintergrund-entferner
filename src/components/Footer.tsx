@@ -12,8 +12,8 @@ const Footer = ({ locale }: FooterProps) => {
     'text-muted-foreground hover:text-foreground text-sm transition-colors underline-offset-2 hover:underline';
 
   return (
-    <footer className="w-full border-t border-border/40 mt-20 sm:mt-24">
-      <div className="max-w-[1260px] mx-auto px-4 py-10 sm:py-14">
+    <footer className="w-full mt-20 sm:mt-24 pb-8 px-4">
+      <div className="glass-card max-w-[1260px] mx-auto p-6 sm:p-10">
         <div className="grid grid-cols-2 sm:grid-cols-3 gap-8 sm:gap-12">
           {/* Tool */}
           <nav aria-label={isDE ? 'Tool-Navigation' : 'Tool navigation'}>
@@ -86,7 +86,7 @@ const Footer = ({ locale }: FooterProps) => {
           </nav>
         </div>
 
-        <div className="mt-10 pt-6 border-t border-border/40 text-center">
+        <div className="mt-8 pt-5 border-t border-border/40 text-center">
           <p className="text-muted-foreground text-xs sm:text-sm">
             © 2026 bgrnd.de – {isDE ? 'Hintergrund entfernen, kostenlos & privat' : 'Remove backgrounds, free & private'}
           </p>
